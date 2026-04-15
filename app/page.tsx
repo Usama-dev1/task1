@@ -70,6 +70,10 @@ const Home = () => {
                     </button>
                     <button
                       className="w-20 rounded bg-black text-white">
+                      Edit
+                    </button>
+                    <button
+                      className="w-20 rounded bg-black text-white">
                       Toggle
                     </button>
                 </div>
