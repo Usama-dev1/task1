@@ -9,29 +9,7 @@ type Todos = {
 const Home = () => {
   const [input, setInput] = useState<string>("");
   const [todo, setTodo] = useState<Todos[]>([]);
-  //load from localstorage
-  useEffect(() => {
-    const getTodos = () => {
-      try {
-        const getTodo = localStorage.getItem("todos");
-        if (getTodo) {
-          setTodo(JSON.parse(getTodo));
-        }
-      } catch (err) {
-        console.error("failed to fetch todos from storage", err);
-      }
-    };
-    getTodos();
-  }, []);
-  //set to local storage if changes
-  useEffect(() => {
-    localStorage.setItem("todos", JSON.stringify(todo));
-  }, [todo]);
-  //if input is added
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setInput(e.target.value);
-  };
-
+  
   //when button is press add todo to object
   const handleAddTodo = () => {
     if (!input.trim()) {
