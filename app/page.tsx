@@ -95,11 +95,6 @@ const Home = () => {
                     onClick={handleDelete(t.id)}>
                     Edit
                   </button>
-                  <button
-                    className="w-20 rounded bg-yellow-400 text-white"
-                    onClick={handleDelete(t.id)}>
-                    Toggle
-                  </button>
                 </div>
               </>
             ))}
