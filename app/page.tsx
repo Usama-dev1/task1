@@ -61,27 +61,16 @@ const Home = () => {
         <div>
           <ul>
             {todo.map((t, index) => (
-              <React.Fragment key={t.id}>
+              <li key={t.id}>
                 <div className="w-100 flex justify-between mt-2">
-                  <li>
-                    <span className="mr-5">{index + 1}</span>
-                    {t.text}
-                  </li>
                   <div className="space-x-2">
                     <button
                       className="w-20 rounded bg-black text-white"
                       onClick={handleDelete(t.id)}>
                       Delete
                     </button>
-
-                    <button
-                      className="w-20 rounded bg-black text-white"
-                      onClick={handleDelete(t.id)}>
-                      Edit
-                    </button>
-                  </div>
                 </div>
-              </React.Fragment>
+              </li>
             ))}
           </ul>
         </div>
