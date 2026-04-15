@@ -65,10 +65,14 @@ const Home = () => {
                 <div className="w-100 flex justify-between mt-2">
                   <div className="space-x-2">
                     <button
-                      className="w-20 rounded bg-black text-white"
-                      onClick={handleDelete(t.id)}>
+                      className="w-20 rounded bg-black text-white">
                       Delete
                     </button>
+                    <button
+                      className="w-20 rounded bg-black text-white">
+                      Toggle
+                    </button>
+                </div>
                 </div>
               </li>
             ))}
