@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useEffect, useState } from "react";
 type Todos = {
   id: number;
@@ -38,6 +38,8 @@ const Home = () => {
       window.alert("no text found");
       return;
     }
+
+    //new todo object
     const newTodo = {
       id: Date.now(),
       text: input,
@@ -45,25 +47,45 @@ const Home = () => {
     };
 
     setTodo([...todo, newTodo]);
-    setInput("")
+    setInput("");
   };
+
+  const handleDelete = (e) => {};
+
   return (
     <>
       <div className="flex flex-col justify-center items-center">
         <h1 className="mt-2 text-5xl text-black"> Todo List</h1>
-        <input
-          className="w-80 mt-2 border-2"
-          type="text"
-          value={input}
-          onChange={handleChange}
-        />
-        <button onClick={handleAddTodo} className="w-40 bg-red-400">
-          Add Todo
-        </button>
+        <div className="w-full h-20 mt-2 flex item-center justify-center space-x-2">
+          <input
+            className="w-80 h-10 border-2"
+            type="text"
+            value={input}
+            onChange={handleChange}
+          />
+          <button
+            onClick={handleAddTodo}
+            className="w-20 h-10 rounded-md hover:bg-gray-700 bg-black text-white">
+            Add Todo
+          </button>
+        </div>
+
         <div>
           <ul>
-            {todo.map((t) => (
-              <li key={t.id}>{t.text}</li>
+            {todo.map((t, index) => (
+              <>
+                <div className="w-100 flex justify-between  mt-2">
+                  <li key={t.id}>
+                    <span className="mr-5">{index + 1}</span>
+                    {t.text}
+                  </li>
+                  <button
+                    className="w-20 rounded bg-black text-white"
+                    onClick={handleDelete(t.id)}>
+                    Delete
+                  </button>
+                </div>
+              </>
             ))}
           </ul>
         </div>
