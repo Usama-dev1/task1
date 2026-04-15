@@ -74,7 +74,7 @@ const Home = () => {
           <ul>
             {todo.map((t, index) => (
               <>
-                <div className="w-100 flex justify-between  mt-2">
+                <div className="w-100 flex justify-between mt-2">
                   <li key={t.id}>
                     <span className="mr-5">{index + 1}</span>
                     {t.text}
@@ -83,6 +83,12 @@ const Home = () => {
                     className="w-20 rounded bg-black text-white"
                     onClick={handleDelete(t.id)}>
                     Delete
+                  </button>
+
+                  <button
+                    className="w-20 rounded bg-black text-white"
+                    onClick={handleDelete(t.id)}>
+                    Edit
                   </button>
                 </div>
               </>
