@@ -58,7 +58,7 @@ const Home = () => {
         <h1 className="mt-2 text-5xl text-black"> Todo List</h1>
         <div className="w-full h-20 mt-2 flex item-center justify-center space-x-2">
           <input
-            className="w-80 h-10 border-2"
+            className="w-80 h-10 border-2 rounded"
             type="text"
             value={input}
             onChange={handleChange}
