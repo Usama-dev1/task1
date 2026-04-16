@@ -11,11 +11,6 @@ const Home = () => {
   const [input, setInput] = useState<string>("");
   const [todo, setTodo] = useState<Todos[]>([]);
   
-  //if input is added
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setInput(e.target.value);
-  };
-
   //when button is press add todo to object
   const handleAddTodo = () => {
     if (!input.trim()) {
