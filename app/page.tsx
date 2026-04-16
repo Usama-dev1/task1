@@ -1,7 +1,10 @@
 "use client";
 import { useState } from "react";
 import React from "react";
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1fed0f718507ed32aae7ac97a6ff6213f4073799
 type Todos = {
   id: number;
   text: string;
@@ -63,6 +66,7 @@ const updateTodo=todo.map(
 
           <button
             onClick={handleAddTodo}
+            onKeyDown={handleAddTodo}
             className="w-20 h-10 rounded-md hover:bg-gray-700 bg-black text-white">
             Add Todo
           </button>
